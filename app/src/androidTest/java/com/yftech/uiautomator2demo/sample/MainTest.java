@@ -1,4 +1,4 @@
-package com.yftech.uiautomator2demo;
+package com.yftech.uiautomator2demo.sample;
 
 /**
  * Created by 薛东磊 on 2017/6/2.

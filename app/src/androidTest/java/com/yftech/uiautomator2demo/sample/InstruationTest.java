@@ -1,4 +1,4 @@
-package com.yftech.uiautomator2demo;
+package com.yftech.uiautomator2demo.sample;
 
 import android.app.Instrumentation;
 import android.content.Context;
