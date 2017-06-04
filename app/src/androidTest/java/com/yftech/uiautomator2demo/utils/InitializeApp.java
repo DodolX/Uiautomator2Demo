@@ -7,6 +7,10 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.uiautomator.By;
 import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.Until;
+import android.support.test.uiautomator.v18.BuildConfig;
+
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -22,8 +26,19 @@ public class InitializeApp {
     private static final String TAG = "UiAutomator";
     private static UiDevice mDevice;
 
+
+
     @BeforeClass
     public static void startMainActivityFromHomeScreen() throws RemoteException {
+
+        //Logging system initialization the current set up open log true ，close the log false
+        Logger.addLogAdapter(new AndroidLogAdapter(){
+            @Override
+            public boolean isLoggable(int priority, String tag) {
+                return true;
+            }
+        });
+
         // Initialize UiDevice instance
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
         if (!mDevice.isScreenOn()) {

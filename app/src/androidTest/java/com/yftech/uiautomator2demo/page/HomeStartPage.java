@@ -28,7 +28,6 @@ public class HomeStartPage extends InitializeApp{
 
     public static void clickFacebookButton()  {
         UserAction.clickByText(loginByFacebookButton,FACEBOOK_BUTTON_TEXT);
-
     }
 
     public static void clickRegistationButton(){

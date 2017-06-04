@@ -2,6 +2,8 @@ package com.yftech.uiautomator2demo.testcase;
 
 import android.support.test.runner.AndroidJUnit4;
 
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 import com.yftech.uiautomator2demo.page.HomeStartPage;
 import com.yftech.uiautomator2demo.page.LoginPage;
 import com.yftech.uiautomator2demo.utils.InitializeApp;
@@ -17,10 +19,16 @@ import org.junit.runner.RunWith;
 public class TestCaseEmailLogin extends InitializeApp{
 
 
+
+
     @Test
     public void useEmailLoginWithCorrectPassword(){
+
+        //Logger.addLogAdapter(new AndroidLogAdapter());
+        Logger.d("test start");
         HomeStartPage.clickLoginByEmailButton();
         LoginPage.clickBackButton();
         HomeStartPage.clickLoginByEmailButton();
+        Logger.i("test finished");
     }
 }

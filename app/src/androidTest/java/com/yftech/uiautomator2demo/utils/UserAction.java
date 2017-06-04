@@ -6,6 +6,7 @@ import android.support.test.uiautomator.UiSelector;
 import android.util.Log;
 
 /**
+ * 模拟用户操作
  * Created by 薛东磊 on 2017/6/4.
  */
 
@@ -15,12 +16,13 @@ public class UserAction {
     public static void clickByText(UiObject object,String text)  {
         object = new UiObject(new UiSelector().text(text));
         if(!object.exists()){
-            Log.d(TAG, "clickByText: object not find: " +text);
+            Log.e(TAG, "clickByText: object not find" );
         }else {
             try {
                 object.clickAndWaitForNewWindow();
             } catch (UiObjectNotFoundException e) {
                 e.printStackTrace();
+                Log.e(TAG, "clickByText: "+ e.toString());
             }
         }
     }
