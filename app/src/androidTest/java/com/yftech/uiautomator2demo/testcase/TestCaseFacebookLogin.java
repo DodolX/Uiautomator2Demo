@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 public class TestCaseFacebookLogin extends InitializeApp {
     @Test
-    public void usingTheCorrectAccountNumberPasswordToLogIn(){
+    public void usingCorrectAccountNumberPasswordToLogIn(){
         HomeStartPage.clickFacebookButton();
     }
 

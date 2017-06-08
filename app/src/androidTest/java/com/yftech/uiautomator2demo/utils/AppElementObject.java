@@ -14,7 +14,6 @@ public class AppElementObject extends UiObject {
     private String TEXT;
     private String CLASS_NAME;
 
-
     /**
      * Constructs a UiObject to represent a view that matches the specified
      * selector criteria.
@@ -30,8 +29,6 @@ public class AppElementObject extends UiObject {
         this.TEXT = text;
         this.CLASS_NAME = classname;
     }
-
-
 
     public String getACCESS_ID() {
         return ACCESS_ID;
